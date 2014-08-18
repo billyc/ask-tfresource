@@ -134,7 +134,7 @@ h2 {
 /* Page sections */
 
 .qa-header {
-	background:none repeat scroll 0 0 #1990DD;
+	background:none repeat scroll 0 0 #ddd;
     display: inline-block;
     margin: -1px auto 0;
     text-align: left;
@@ -321,7 +321,7 @@ h2 {
 	width: 100%;
 	float: right;
 	background: none repeat scroll 0 0 #FAFAFA;
-    border: 1px solid #2198DD;
+    border: 1px solid #bc3f19;
     display: inline;
 	position: relative;
     margin-bottom: 5px;
@@ -343,7 +343,7 @@ h2 {
     padding: 0 4px;
 }
 .qa-search-button{
-	background: none repeat scroll 0 0 #3399FF;
+	background: none repeat scroll 0 0 #bc3f19;
     border: 0 none;
     border-radius: 0 3px 3px 0;
     color: #FFFFFF;
