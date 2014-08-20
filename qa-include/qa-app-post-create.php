@@ -34,6 +34,7 @@
 	require_once QA_INCLUDE_DIR.'qa-db-points.php';
 	require_once QA_INCLUDE_DIR.'qa-db-hotness.php';
 	require_once QA_INCLUDE_DIR.'qa-util-string.php';
+	require_once QA_INCLUDE_DIR.'qa-app-posts.php';
 	
 	
 	function qa_combine_notify_email($userid, $notify, $email)
@@ -54,7 +55,6 @@
 */
 	{
 		require_once QA_INCLUDE_DIR.'qa-db-selects.php';
-
 		$postid=qa_db_post_create($queued ? 'Q_QUEUED' : 'Q', @$followanswer['postid'], $userid, isset($userid) ? null : $cookieid,
 			qa_remote_ip_address(), $title, $content, $format, $tagstring, qa_combine_notify_email($userid, $notify, $email),
 			$categoryid, isset($userid) ? null : $name);
@@ -91,7 +91,11 @@
 			'notify' => $notify,
 			'email' => $email,
 		));
-		
+
+        /* Immediately close if it's an announcement */
+        if ($categoryid=='1')
+            qa_post_set_closed($postid,true,null,' ');
+
 		return $postid;
 	}
 	

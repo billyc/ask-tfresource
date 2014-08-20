@@ -99,7 +99,7 @@
 		'moved' => 'moved',
 		'nav_activity' => 'All Activity',
 		'nav_admin' => 'Admin',
-		'nav_ask' => 'Ask a Question',
+		'nav_ask' => 'New Question/Post',
 		'nav_categories' => 'Categories',
 		'nav_feedback' => 'Send feedback',
 		'nav_home' => 'Home',
