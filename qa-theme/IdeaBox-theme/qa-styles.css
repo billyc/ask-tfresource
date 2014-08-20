@@ -46,6 +46,11 @@ a:hover {
 p {
 	margin:2px;
 }
+p + p {
+	margin:2px;
+    margin-top:0.5em;
+}
+
 .qa-body-wrapper {
 	margin: 0 auto 5px;
     max-width: 1140px;
@@ -711,20 +716,22 @@ h2 {
 }
 /* Standard form (light version - buttons only) */
 
-.qa-form-light-button, .qa-form-light-hover {
-	background:none;
-	border:1px solid #fff;
+.qa-form-light-button {
+	background:#fff;
+	border:1px solid #ddd;
 	cursor:pointer;
-	padding:0;
-	margin-right:6px;
+	padding:0 2px 0 2px;
+	margin-right:4px;
 	font-size:10px;
 	overflow: visible;
 } /* overflow:visible for IE, 1px border needed for tooltips to work more reliably in IE */
 .qa-form-light-button {
 	color:#666;
 }
+
 .qa-form-light-hover, .qa-form-light-button:hover {
 	color:#000;
+	background:#fca;
 }
 /* Standard form (basic version - buttons only) */
 
@@ -1153,7 +1160,7 @@ h2 {
 .qa-q-view-c-list {
 	clear:both;
 	margin:24px 0 0 24px;
-	border-top:1px dotted #666;
+	/*border-top:1px dotted #666;*/
 }
 .qa-q-view-hidden {
 }
@@ -1181,6 +1188,11 @@ h2 {
 	background-color:#ccc;
 }
 /* Answer view  */
+
+/* Add a thin red line to top of answer list */
+.qa-part-a-list h2 {
+    border-top:2px dotted #bc3f19;
+}
 
 .qa-a-list-item {
 	margin-bottom:40px;
@@ -1257,7 +1269,7 @@ h2 {
 .qa-a-item-c-list {
 	clear:both;
 	margin:12px 0 0 12px;
-	border-top:1px dotted #666;
+	/*border-top:1px dotted #666;*/
 }
 /* Answer selection */
 
@@ -1306,7 +1318,7 @@ h2 {
 /* Comments */
 
 .qa-c-list-item {
-	border-bottom:1px dotted #666;
+	border-top:1px dotted #666;
 	padding:6px;
 	padding-right:0;
 }
@@ -1559,6 +1571,16 @@ h2 {
 		margin-bottom: 10px;
 		padding-bottom: 10px;
 	}
+
+    /* these ensure questions & answers flow correctly */
+    .qa-q-view-main {
+        width:auto;
+    }
+
+    .qa-a-item-main {
+        width:auto;
+    }
+
 	.qa-main {
 		padding: 1%;
 		width: 98%;
