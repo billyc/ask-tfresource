@@ -232,8 +232,9 @@ qa_register_layer('/qa-admin-options.php', 'Theme Options', $theme_dir , $theme_
 		function attribution()
 		{
 			$this->output('<DIV CLASS="qat-qa-attribution">');
-				$this->output('Designed by <A HREF="http://QA-Themes.com/" title="Free Q2A Themes and plugins">QA-Themes.com</A>, ');
+				$this->output('<font size="1">(c) 2014 <a href="http://www.trb.org">TRB</a> - site design from <A HREF="http://QA-Themes.com/" title="Free Q2A Themes and plugins">QA-Themes.com</A> - ');
 				qa_html_theme_base::attribution();
+                $this->output('</font>');
 			$this->output('</DIV>');
 		}
 	}

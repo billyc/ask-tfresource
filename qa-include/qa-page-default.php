@@ -169,6 +169,13 @@
 	if ( (!$explicitqa) && (!$countslugs) && qa_opt('show_home_description') )
 		$qa_content['description']=qa_html(qa_opt('home_description'));
 
+    /* If on homepage with no slugs, add the cute welcome banner */
+	if (!$countslugs) {
+        /* PHP arrays are ordered maps!  weird. Put the banner first. */
+        $qa_content = array_reverse($qa_content,true);
+        $qa_content['custom'] = qa_opt('custom_home_content');
+        $qa_content = array_reverse($qa_content,true);
+    }
 	
 	return $qa_content;
 
