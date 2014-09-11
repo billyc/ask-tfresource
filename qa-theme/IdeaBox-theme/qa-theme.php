@@ -59,21 +59,29 @@ qa_register_layer('/qa-admin-options.php', 'Theme Options', $theme_dir , $theme_
 			$this->body_prefix();
 			$this->notices();
 			
-
-
 			$this->header();
-			$this->output('<DIV CLASS="qa-body-wrapper">', '');
+			$this->output('<DIV CLASS="qa-billy-wrapper1">', '');
+			$this->output('<DIV CLASS="qa-billy-wrapper2">', '');
 
-			$this->widgets('full', 'top');
 			$this->nav_main_sub();
 			$this->output('<DIV CLASS="qa-sub-nav">');
 			$this->nav('sub');
 			$this->output('</DIV>');
 			
+            $this->output('</DIV> <!-- END billy-wrapper2 -->');
+			$this->output('</DIV> <!-- END billy-wrapper1 -->');
+
+			$this->output('<DIV CLASS="qa-body-wrapper">', '');
+
+			$this->widgets('full', 'top');
 			$this->widgets('full', 'high');
+
 			$this->main();
+
 			$this->sidepanel();
+
 			$this->widgets('full', 'low');
+
 			$this->output('</DIV> <!-- END body-wrapper -->');
 			
 			$this->footer();

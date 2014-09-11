@@ -51,6 +51,15 @@ p + p {
     margin-top:0.5em;
 }
 
+.qa-billy-wrapper1 {
+    background: #bc3f19;
+}
+
+.qa-billy-wrapper2 {
+    max-width: 1140px;
+	margin: 0 auto 5px;
+}
+
 .qa-body-wrapper {
 	margin: 0 auto 5px;
     max-width: 1140px;
@@ -404,6 +413,7 @@ h2 {
 
 .qa-nav-main {
 	clear:both;
+    background: #bc3f19;
 }
 .qa-nav-main-list {
 	font-size:16px;
@@ -412,10 +422,10 @@ h2 {
 	margin:0;
 }
 .qa-nav-main-selected {
-    color: #157AB5 !important;
+    color: yellow !important;
 }
 .qa-nav-main-link:hover{
-	color: #444444 !important;
+	color: #bc3f19 !important;
 	text-decoration: none;
 }
 .qa-nav-main-item {
@@ -427,13 +437,16 @@ h2 {
 	margin-right:4px;
 }
 .qa-nav-main-link {
-	color: #808080;
+	color: white;
     display: block;
-    font-weight: bold;
     padding: 6px 10px;
+    font-size:13px;
+    text-transform: uppercase;
+
 }
 .qa-nav-main-item:hover, .qa-nav-main-item-selected  {
 	text-decoration:none;
+    background: #f6f6f6;
 }
 .qa-sub-nav{
     float: left;
@@ -731,7 +744,7 @@ h2 {
 
 .qa-form-light-hover, .qa-form-light-button:hover {
 	color:#000;
-	background:#fca;
+	background:#cfc;
 }
 /* Standard form (basic version - buttons only) */
 
